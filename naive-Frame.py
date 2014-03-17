@@ -1,8 +1,10 @@
 
 
 import wx
-from wx.lib.wordwrap import wordwrap
+# from wx.lib.wordwrap import wordwrap
 import time
+from reduction import execute
+
 class MyFrame(wx.Frame):
     
 #-----------------------------------------------------------------------------------------------------------------
@@ -116,7 +118,7 @@ class MyFrame(wx.Frame):
         # do the processing ...
         proc_data = string1   
         # show the result ...
-        self.display.SetValue(proc_data) 
+        self.display.SetValue(execute(proc_data))
         
 
 app = wx.App(redirect=False)
